@@ -308,6 +308,7 @@ export async function createClubhouseStory(
     ],
   };
   if (clubhouseUserId) {
+    body.requested_by_id = clubhouseUserId;
     body.owner_ids = [clubhouseUserId];
   }
   if (STATE_NAME) {
