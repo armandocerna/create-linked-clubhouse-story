@@ -109,6 +109,9 @@ export async function getClubhouseUserId(
     try {
       const USER_MAP = JSON.parse(USER_MAP_STRING) as Record<string, string>;
       if (githubUsername in USER_MAP) {
+        core.info(
+          `Found user ${githubUsername} in ${USER_MAP[githubUsername]}`
+        );
         return USER_MAP[githubUsername];
       }
     } catch (err) {
