@@ -349,11 +349,6 @@ export interface ClubhouseCreateStoryCommentParams {
   updated_at?: string;
 }
 
-export interface ClubhouseCreateExternalTicketParams {
-  external_id: string;
-  external_url: string;
-}
-
 /** Request parameters for creating a Label on a Clubhouse story. */
 export interface ClubhouseCreateLabelParams {
   color: string;
@@ -386,7 +381,7 @@ export interface ClubhouseCreateStoryBody {
   epic_id?: number | null;
   estimate?: number | null;
   external_id?: string;
-  external_tickets?: ClubhouseCreateExternalTicketParams[];
+  external_links?: string[];
   file_ids?: number[];
   follower_ids?: string[];
   iteration_id?: number | null;
